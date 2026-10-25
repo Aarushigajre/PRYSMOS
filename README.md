@@ -8,6 +8,16 @@ Bare-metal AArch64 OS built from scratch and run under QEMU inside an Ubuntu Doc
 docker build -t prsymos .
 ```
 
+## Create the container from image and mount the current project directory
+```sh
+docker run -d -it -v "$PWD":/os --name prysmosdocker prsymos
+```
+
+## Log into the docker container shell
+```sh
+docker exec -it prysmosdocker bash
+```
+
 ## Build the kernel
 
 ```sh

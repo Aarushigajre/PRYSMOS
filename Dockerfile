@@ -8,6 +8,7 @@ RUN apt-get update && apt-get install -y \
         binutils-aarch64-linux-gnu \
         qemu-system-arm \
         make \
+        device-tree-compiler \
     && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /os
